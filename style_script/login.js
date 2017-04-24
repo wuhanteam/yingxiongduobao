@@ -4,12 +4,12 @@ function login(){
 	var userName = $("#userName").val().trim();
 	var userPwd = $("#userPwd").val().trim();
 	alert(userName+">>>>>"+userPwd);
-	if(userName==""){
+	if(userName==""||userName=="用户名"){
 		alert("请输入用户名！");
 		return;
 	}
 	
-	if(userPwd == ""){
+	if(userPwd == ""||userPwd=="密码"){
 		alert(" 请输入密码！");
 		return;
 	}
@@ -20,11 +20,13 @@ function login(){
 	    type: "post",
 	    data: {"userName":userName,"userPwd":userPwd},
 	    //方法所在页面和方法名      
-	    url: "http://192.168.0.104:8080/Furnish/login/AppLoginServlet.action",     
+	    url: "http://192.168.0.104:8080/Furnish/App/AppLoginServlet.action",     
 	       
 	    dataType: "json",     
 	    success: function(data) {
 	    	// 装填数据
+	    	// 测试直接认证成功
+	    	//data = '0';
 	    	if(data == '-1'){
 	    		alert("您输入的用户名和密码不匹配!");	    		
 	    	}else if(data == '0'){
@@ -38,6 +40,7 @@ function login(){
 	    },     
 	    error: function(err) {  
 	       alert("登录异常！");    
+	       window.location.href='index.html';
 	    }     
 	}); 
 	

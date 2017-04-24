@@ -41,19 +41,23 @@ $(document).ready(function(){
 })
 
 function init(){
-	// alert(1111);
+	alert(1111);
+	alert("http://192.168.0.104:8080/Furnish/App/QueryAppIndexServlet.action");
   // ajax请求 页面所需内容
   $.ajax({
   		//要用post方式      
 	    type:"post",
 	    data:{"userName":'1111'},
-	    url:'http://192.168.0.104:8080/Furnish/services/QueryAppIndexServlet.action',
+	    url:'http://192.168.0.104:8080/Furnish/App/QueryAppIndexServlet.action',
 	    dataType: "json",
 	    success: function(data) {
-	    	 alert("初始化数据！");
+	    	 alert("初始化数据！"+ data);
+	    	 var topInfo = data.pagetop;
+	    	 alert(topInfo);
 	    },
 	    error: function(err) {  
-	    	console.log(err);
+	    	console.log(err.eval());
+	    	
 	        alert("初始化出错");  
 	      
 	    } 
