@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<link href="style_css/media.css" type="text/css" rel="stylesheet">
+<link href="style_css/basic.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="style_css/mobile_app.css">
+<script type="text/javascript" src="style_script/jquery-1.7.2.min.js" ></script>
+
+<title>个人信息管理</title>
+</head>
+
+
+
+<body>
+
+
+	<div class="wrap">
+    	
+        <div class="commmonnav">
+    		<div class="leftbacknav" onclick="javascript:window.location.href='mine.html'" ><img src="image/leftback.png" /></div>
+            个人信息管理
+        </div>	
+        <div class="blank"></div>
+        
+       <div class="logbox">
+        	
+            <div class="logrow2"><div class="leftinfo">地址</div><input class="listlogintext" value="默认显示"  onfocus="this.value=''" onblur="if(this.value==''){this.value='默认显示'}"></div>
+            
+            <div class="logrow2"><div class="leftinfo">邮箱</div><input class="listlogintext" value="1309890787898@qq.com"  onfocus="this.value=''" onblur="if(this.value==''){this.value='邮箱'}"></div>
+           
+            <div class="logrow2"><div class="leftinfo">手机号</div><input class="listlogintext" value="18062686366"  onfocus="this.value=''" onblur="if(this.value==''){this.value='18062686366'}"></div>
+            
+            <div class="logrow2"><div class="leftinfo">平台账户</div><input class="listlogintext" value="89udbb"  onfocus="this.value=''" onblur="if(this.value==''){this.value='89dbbchj'}"></div>
+            
+        	<div class="logrow2"><div class="leftinfo">支付宝账户</div><input class="listlogintext" value="支付宝账户"  onfocus="this.value=''" onblur="if(this.value==''){this.value='支付宝账户'}"></div>
+            
+        </div> 
+        
+<style>
+.logrow2 { width:92%; padding:0 4%;}
+.leftinfo { float:left;line-height: 2.3em;
+    font-size: 1.1em;
+    padding-top: 0.6em;}
+</style>       
+        
+
+    <script type="text/javascript">
+	<!--这个是确认支付的弹窗--> 
+    		$(".orderbutton").click(function(){
+				$(".modal").show();
+			});
+			$(".giveup").click(function(){
+				$(".modal").hide();
+			});
+			
+	<!--这个是下拉框的收缩菜单--> 
+			
+			$(".downup").click(function(){
+				$(".downupbox").slideToggle(200);
+			});
+			
+			
+	<!--这个选择支付形式的单选--> 
+			$(".waycheck").click(function(){
+				
+				  var index=$(this).index();
+				  $(".waycheck img").attr("href","image/check"+index+".png");
+				  $(".waycheck img").attr("src","image/check"+index+".png");
+				
+	
+		    })		
+    </script>  
+      
+</body>
+</html>

@@ -1,0 +1,254 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<link href="style_css/media.css" type="text/css" rel="stylesheet">
+<link href="style_css/basic.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="style_css/mobile_app.css">
+<script type="text/javascript" src="style_script/jquery-1.7.2.min.js" ></script>
+<!-- <script type="text/javascript" src="style_script/touch.js" ></script> -->
+<script type="text/javascript" src="style_script/touch-0.2.14.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//滑动显示按钮
+		touch.on(".cartlist","swipeleft swiperight",function(e){
+		    //console.log(e.type);
+			var this_item = $(e.currentTarget);//当前绑定事件的对象
+            var del_box = this_item.find(".shanchubox");
+
+            if(e.type=="swipeleft"){
+				del_box.slideDown(100);//显示删除按钮
+            }else{
+            	del_box.slideUp(100);
+            }
+		});
+        
+        //点击删除
+		touch.on(".shanchu","tap",function(e){
+			var item = $(e.currentTarget).parent().parent().parent();
+			item.remove();
+		});
+
+		//全选
+		touch.on("#check_all_img","tap",function(){
+			var status = $(this).attr("src");
+            
+            //取消
+			if(status.indexOf("2.png")!=-1){
+				$(this).attr("src","image/check1.png");
+                $(this).siblings().prop("checked",false);  //全按钮本身选
+
+                //列表中的所有取消选中
+                $(".pro_id").prop("checked",false);
+                $(".divcheck").find("img").attr("src","image/check1.png");
+
+                //console.log(1);
+			}else{
+				//选中
+				$(this).attr("src","image/check2.png");
+				$(this).siblings().prop("checked",true); //全按钮本身选
+
+				//列表中的所有 选中
+                $(".pro_id").prop("checked",true);
+                $(".divcheck").find("img").attr("src","image/check2.png");
+                //console.log(2);
+			}
+			
+			//console.log(getAllProId());
+		});
+
+		//列表复选框效果:自定义复选框样式
+		touch.on(".divcheck > img","tap",function(){
+			var box_status = $(this).attr("src"); //input
+
+			if(box_status.indexOf("2.png")==-1){
+				$(this).attr("src","image/check2.png");
+				$(this).siblings().prop("checked",true); 
+			}else{
+				$(this).attr("src","image/check1.png");
+				$(this).siblings().prop("checked",false); 
+			}
+
+			//console.log(getAllProId());
+		});
+
+        
+        //得到所有的先选中产品id:返回的是产品id 数组
+        function getAllProId(){
+        	//得到所有的先选中产品id
+			var pro_id = $(".divcheck input:checked");
+			var pro_id_arr = [];
+            pro_id.each(function(i,ele){
+            	pro_id_arr.push($(this).val());
+            });
+            return pro_id_arr;
+        }
+
+        //选择所有1元购配送
+        touch.on("#check_all_ps","tap",function(){
+			var box_status = $(this).attr("src"); //input
+
+			if(box_status.indexOf("2.png")==-1){
+				$(this).attr("src","image/check2.png");
+				$(this).siblings().prop("checked",true); 
+			}else{
+				$(this).attr("src","image/check1.png");
+				$(this).siblings().prop("checked",false); 
+			}
+		});
+
+        //加减产品,自己完善...
+	});
+</script>
+
+<style type="text/css">
+	/*删除相关样式*/
+	.shanchubox{
+		display: none;
+	}
+
+	/*全选相关样式*/
+	.divcheck input{
+		display:none;
+	}
+	
+
+	/*全选按钮*/
+	.checkimg input{display: none;}
+
+</style>
+<title>购物车</title>
+<style>.pr{position: relative;}</style>
+</head>
+
+
+
+<body>
+
+
+	<div class="wrap">
+    	
+        <div class="commmonnav">
+    		<div class="leftbacknav" onclick="javascript:window.location.href='productdetail.html'"><img src="image/leftback.png" /></div>
+            购物车
+        </div>	
+        <div class="blank"></div>
+        
+        <div class="checkallinfo">
+
+        <div class="checkimg">
+        	<img src="image/check1.png" id="check_all_ps"/>
+        	<input type="checkbox" name="check_all_pro" id="check_all_ps">
+        </div>
+
+        所有商品由一元购配送</div>
+		
+        <div class="blank"></div>
+
+        <!-- start -->
+
+        <div class="cartlist">
+        	<div class="pr">
+                <!-- 这里是删除的样子，高度应该跟cartlist等高begin-->
+                <div class="shanchubox">
+                    <div class="shanchu_l">这里是盈藏的文字</div>
+                    <div class="shanchu">删除1</div>
+                </div>
+                <!-- 这里是删除的样子，高度应该跟cartlist等高end-->
+
+                <div class="divcheck">
+                    <input type="checkbox" name="pro_id" class="pro_id" value="1">
+                    <img src="image/check1.png" />
+                </div>
+    
+                <div class="proimg"><img src="image/pro2.png" /></div>
+                <div class="prodetail">
+                    <div class="protext1">这里是产品名称1</div>
+                    <div class="protext2">总需1678次</div>
+                    <div class="protext2">剩余<b>879</b>次</div>
+                    <span style="float:right; margin-right:4%; margin-top:0.4em;">
+                        <a href="javascript:void(0);" class="jia1">+</a>
+                        <input id="J_IptAmount" type="text" value="1909" class="inputvalue" title="请输入购买量">
+                        <a href="javascript:void(0);" class="jian1">-</a>
+                        <a href="javascript:void(0);" class="jian1">M</a>
+                    </span>
+                </div>
+            </div>
+        </div> 
+
+        <div class="cartlist">
+        	<div class="pr">
+      
+            	<!-- 这里是删除的样子，高度应该跟cartlist等高begin-->
+                <div class="shanchubox">
+            		<div class="shanchu_l">这里是盈藏的文字</div>
+            		<div class="shanchu">删除2</div>
+                </div>
+                <!-- 这里是删除的样子，高度应该跟cartlist等高end-->
+                
+                <div class="divcheck">
+	        	    <input type="checkbox" name="pro_id" class="pro_id" value="2">
+	        		<img src="image/check1.png" />
+        		</div>
+
+                <div class="proimg"><img src="image/pro2.png" /></div>
+                <div class="prodetail">
+                    <div class="protext1">这里是产品名称2</div>
+                    <div class="protext2">总需1678次</div>
+                    <div class="protext2">剩余<b>879</b>次</div>
+                    <span style="float:right; margin-right:4%; margin-top:0.4em;">
+                        <a href="javascript:void(0);" class="jia1">+</a>
+                        <input id="J_IptAmount" type="text" value="1909" class="inputvalue" title="请输入购买量">
+                        <a href="javascript:void(0);" class="jian1">-</a>
+                        <a href="javascript:void(0);" class="jian1">M</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <!-- end -->
+
+        <div class="blankheight"></div>
+        <div class="mianyou"><img src="image/mian.png" /></div>       
+		<div class="blank"></div>
+        <div class="allorder">
+        	<div class="checkimg">
+        		<img src="image/check1.png" id="check_all_img" />
+        		<input type="checkbox" name="check_all_pro" id="check_all_pro">
+        	</div>全选
+        
+            <div class="totalprice">总计<b>$457</b><i>(可用可乐币抵扣￥23)</i></div>
+        	<div class="cartorderbutton" onclick="javascript:window.location.href='order.html'">结算</div>
+        </div>
+        
+  
+   
+   
+      	<div class="blank"></div>
+        
+        
+        
+        
+        
+        <ul class="fixedbottomnav">
+        	<li><div class="navimg"><img src="image/b1.png" /></div></li>
+            <li><div class="navimg"  onclick="javascript:window.location.href='kaijiang.html'" ><img src="image/b2.png" /></div></li>
+            <li><div class="navimg"  onclick="javascript:window.location.href='rewardslist.html'"><img src="image/b3.png" /></div></li>
+            <li><div class="navimg4"><img src="image/b4.png" /></div></li>
+            <li><div class="navimg"  onclick="javascript:window.location.href='mine.html'" ><img src="image/b5.png" /></div></li>
+        
+        </ul>
+
+	
+	</div>
+      
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+	"index.html": {
+		"resources": [
+			"image/b5.png",
+			"image/30.png",
+			"image/leftback.png",
+			"image/chongchi.png",
+			"image/b1.png",
+			"style_script/hhSwipe.js",
+			"style_css/mobile_app.css",
+			"image/b2.png",
+			"image/b4.png",
+			"image/ba1.png",
+			"image/indexmodal.png",
+			"style_script/jquery-1.7.2.min.js",
+			"style_css/basic.css",
+			"image/b3.png",
+			"image/notice.png",
+			"image/rightgo.png",
+			"style_css/media.css",
+			"image/modify.png",
+			"style_script/index.js",
+			"rewardslist.html",
+			"mine.html",
+			"kaijiang.html",
+			"chongzhi.html"
+		],
+		"refer": [
+			"mine.html",
+			"kaijiang.html",
+			"rewardslist.html",
+			"productdetail.html",
+			"chongzhi.html"
+		]
+	},
+	"mine.html": {
+		"resources": [
+			"image/y.png",
+			"image/money.png",
+			"image/minebg.png",
+			"image/address.png",
+			"image/contact.png",
+			"index.html",
+			"myinformationlist.html"
+		],
+		"refer": [
+			"index.html",
+			"myinformationlist.html"
+		]
+	},
+	"kaijiang.html": {
+		"resources": [
+			"image/time.png",
+			"index.html"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"productdetail.html": {
+		"resources": [
+			"image/shx.png",
+			"image/sure.png",
+			"image/cart.png",
+			"image/prev.png",
+			"index.html",
+			"image/perimg.png",
+			"cart.html"
+		],
+		"refer": [
+			"index.html",
+			"cart.html",
+			"rewardslist.html"
+		]
+	},
+	"rewardslist.html": {
+		"resources": [
+			"image/perimg.png",
+			"productdetail.html"
+		],
+		"refer": [
+			"productdetail.html"
+		]
+	},
+	"cart.html": {
+		"resources": [
+			"image/check1.png",
+			"image/mian.png",
+			"image/pro2.png",
+			"style_script/touch-0.2.14.js",
+			"rewardslist.html"
+		],
+		"refer": [
+			"kaijiang.html",
+			"rewardslist.html"
+		]
+	},
+	"myinformationlist.html": {
+		"refer": [
+			"mine.html"
+		],
+		"resources": [
+			"mine.html"
+		]
+	},
+	"mobileindex_login.html": {
+		"resources": [
+			"image/eye.jpg",
+			"image/weixin.png",
+			"image/closelog.png",
+			"image/close.png",
+			"style_css/mobile_app.css",
+			"style_script/login.js",
+			"image/per.png",
+			"image/logintitle.png",
+			"style_script/user.js",
+			"style_script/jquery-1.7.2.min.js",
+			"style_css/basic.css",
+			"image/yiyuan.png",
+			"image/weibo.png",
+			"image/key.png",
+			"style_css/media.css",
+			"image/qq.png",
+			"index.html",
+			"image/close_eye.png"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"chongzhi.html": {
+		"refer": [
+			"index.html"
+		]
+	}
+}

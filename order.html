@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+<link href="style_css/media.css" type="text/css" rel="stylesheet">
+<link href="style_css/basic.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="style_css/mobile_app.css">
+<script type="text/javascript" src="style_script/jquery-1.7.2.min.js" ></script>
+
+<title>支付订单弹窗</title>
+</head>
+
+
+
+<body>
+
+
+	<div class="wrap">
+    	
+        <div class="commmonnav">
+    		<div class="leftbacknav" onclick="javascript:window.location.href='cart.html'"><img src="image/leftback.png" /></div>
+            支付订单
+        </div>	
+        <div class="blank"></div>
+        
+        <div class="orderblank">
+        	<div class="totalpro">商品合计</div>
+            <div class="choosename"><b>1</b>夺宝币</div>
+            <div class="downup"><img src="image/down.png" /></div>
+        </div>
+        
+        <div class="blankheight"></div>
+        
+        <div class="orderblank">
+        	<div class="totalpro">红包</div>
+            <div class="hongbaocolor choosename">无可用的红包</div>
+            <div class="downup"><img src="image/right.png" /></div>
+        </div>
+        
+     <!--这个是下拉提示框的代码begin-->
+        <ul class="downupbox">
+			<li>这是下拉红包列表</li>
+            <li>这是下拉红包列表</li>
+            <li>这是下拉红包列表</li>
+            <li>这是下拉红包列表</li>
+        </ul>
+     <!--这个是下拉提示框的代码end-->
+        
+        <div class="blankheight"></div>
+        
+        <div class="orderblank">
+        	<div class="orderway_one">余额支付（账户余额：0夺宝币）</div>
+            <div class="orderway_two"><div class="wayname">其他支付方式</div><div class="normal">（1元=1夺宝币）</div><b>￥1</b></div>
+            <div class="orderway_three">
+            	<div class="waypic"><img src="image/way1.png" /></div>
+                <div class="waytext">购卡支付</div>
+                <div class="waycheck"><img src="image/check1.png" /></div>
+            </div>
+            <div class="orderway_three">
+            	<div class="waypic"><img src="image/way2.png" /></div>
+                <div class="waytext">微信支付</div>
+                <div class="waycheck"><img src="image/check1.png" /></div>
+            </div>
+            <div class="orderway_three">
+            	<div class="waypic"><img src="image/way3.png" /></div>
+                <div class="waytext">充值卡支付</div>
+                <div class="waycheck"><img src="image/check2.png" /></div>
+            </div>
+            <div class="orderway_four">购卡支付限2元及以上</div>
+        </div>
+        <div class="blank"></div>
+        <div class="orderbutton">确认支付</div>
+        
+        
+       <!--这个是确认支付的弹窗begin--> 
+        <div class="modal">
+        	<div class="modalup">
+            	<div class="modaltitle">您离您的宝贝只有一步之遥，真的要放弃吗？</div>
+                <ul class="modalbutton"><li class="giveup">放弃付款</li><li style="margin-right:0;" class="goon">继续支付</li></ul>
+            </div>
+            
+        </div>
+         <!--这个是确认支付的弹窗end--> 
+        
+       
+        
+
+    <script type="text/javascript">
+	<!--这个是确认支付的弹窗--> 
+    		$(".orderbutton").click(function(){
+				$(".modal").show();
+			});
+			$(".giveup").click(function(){
+				$(".modal").hide();
+			});
+			
+	<!--这个是下拉框的收缩菜单--> 
+			
+			$(".downup").click(function(){
+				$(".downupbox").slideToggle(200);
+			});
+			
+			
+			
+			
+			
+			
+	<!--这个选择支付形式的单选--> 
+			$(".waycheck").click(function(){
+				
+				  var index=$(this).index();
+				  $(".waycheck img").attr("href","image/check"+index+".png");
+				  $(".waycheck img").attr("src","image/check"+index+".png");
+				
+	
+		    })		
+    </script>  
+    
+
+
+    
+    
+    
+
+</body>
+</html>
