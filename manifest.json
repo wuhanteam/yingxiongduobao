@@ -122,7 +122,7 @@
 					"weixin": {
 						"appid": "wx3b089aaa32b5fdc4",
 						"appsecret": "d6dbc92cff4010105ec87af6b9f1cd4d"
-					}
+					},"qq":{"appid":"101380194"}
 				}
 			},
 			"apple": {
@@ -235,166 +235,168 @@
 		}
 	},
 	"dependencies": {
-		"pages": {
-			"index.html": {
-				"resources": [
-					"image/b5.png",
-					"image/30.png",
-					"image/leftback.png",
-					"image/chongchi.png",
-					"image/b1.png",
-					"style_script/hhSwipe.js",
-					"style_css/mobile_app.css",
-					"image/b2.png",
-					"image/b4.png",
-					"image/ba1.png",
-					"image/indexmodal.png",
-					"style_script/jquery-1.7.2.min.js",
-					"style_css/basic.css",
-					"image/b3.png",
-					"image/notice.png",
-					"image/rightgo.png",
-					"style_css/media.css",
-					"image/modify.png",
-					"style_script/index.js",
-					"rewardslist.html",
-					"mine.html",
-					"kaijiang.html",
-					"chongzhi.html"
-				],
-				"refer": [
-					"productdetail.html"
-				],
-				"priority": 0
-			},
-			"mine.html": {
-				"resources": [
-					"image/y.png",
-					"image/money.png",
-					"image/minebg.png",
-					"image/address.png",
-					"image/contact.png",
-					"index.html",
-					"myinformationlist.html"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"kaijiang.html": {
-				"resources": [
-					"image/time.png",
-					"index.html"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"productdetail.html": {
-				"resources": [
-					"image/shx.png",
-					"image/sure.png",
-					"image/cart.png",
-					"image/prev.png",
-					"index.html",
-					"image/perimg.png",
-					"cart.html"
-				],
-				"refer": [
-					"rewardslist.html"
-				],
-				"priority": 0
-			},
-			"rewardslist.html": {
-				"resources": [
-					"image/perimg.png",
-					"productdetail.html"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"cart.html": {
-				"resources": [
-					"image/check1.png",
-					"image/mian.png",
-					"image/pro2.png",
-					"style_script/touch-0.2.14.js",
-					"rewardslist.html"
-				],
-				"refer": [
-					"kaijiang.html"
-				],
-				"priority": 0
-			},
-			"myinformationlist.html": {
-				"resources": [
-					"mine.html"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"mobileindex_login.html": {
-				"resources": [
-					"image/eye.jpg",
-					"image/weixin.png",
-					"image/closelog.png",
-					"image/close.png",
-					"style_css/mobile_app.css",
-					"style_script/login.js",
-					"image/per.png",
-					"image/logintitle.png",
-					"style_script/user.js",
-					"style_script/jquery-1.7.2.min.js",
-					"style_css/basic.css",
-					"image/yiyuan.png",
-					"image/weibo.png",
-					"image/key.png",
-					"style_css/media.css",
-					"image/qq.png",
-					"index.html",
-					"image/close_eye.png"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"chongzhi.html": {
-				"resources": [],
-				"refer": [
-					"index.html"
-				],
-				"priority": 0
-			}
-		},
-		"idle": {
-			"resources": [
-				"image/200.png",
-				"image/1.png",
-				"image/more.png",
-				"image/way2.png",
-				"image/search.png",
-				"image/way3.png",
-				"order.html",
-				"image/right.png",
-				"image/loginlogo.png",
-				"image/indexbg.png",
-				"mobileindex_login_password.html",
-				"image/logpasswordpc.png",
-				"style_script/touch.js",
-				"image/lognamepc.png",
-				"image/down.png",
-				"mobileindex_signup.html",
-				"image/img_all.png",
-				"image/4.png",
-				"image/pr2.png",
-				"image/way1.png",
-				"image/up.png",
-				"style_css/my-app.css",
-				"image/3.png",
-				"image/check2.png",
-				"image/2.png",
-				"style_css/main.css",
-				"mobileindex_forgetpassword.html",
-				"searchlist.html",
-				"image/142.png"
-			]
-		}
+	  "pages": {
+	    "index.html": {
+	      "resources": [
+	        "image/b5.png",
+	        "image/30.png",
+	        "image/leftback.png",
+	        "image/chongchi.png",
+	        "image/b1.png",
+	        "style_script/hhSwipe.js",
+	        "style_css/mobile_app.css",
+	        "image/b2.png",
+	        "image/b4.png",
+	        "image/ba1.png",
+	        "image/indexmodal.png",
+	        "style_script/jquery-1.7.2.min.js",
+	        "style_css/basic.css",
+	        "image/b3.png",
+	        "image/notice.png",
+	        "image/rightgo.png",
+	        "style_css/media.css",
+	        "image/modify.png",
+	        "style_script/index.js",
+	        "rewardslist.html",
+	        "mine.html",
+	        "kaijiang.html",
+	        "chongzhi.html"
+	      ],
+	      "refer": [
+	        "productdetail.html"
+	      ],
+	      "priority": 0
+	    },
+	    "mine.html": {
+	      "resources": [
+	        "image/y.png",
+	        "image/money.png",
+	        "image/minebg.png",
+	        "image/address.png",
+	        "image/contact.png",
+	        "index.html",
+	        "myinformationlist.html"
+	      ],
+	      "refer": [],
+	      "priority": 0
+	    },
+	    "kaijiang.html": {
+	      "resources": [
+	        "image/time.png",
+	        "index.html"
+	      ],
+	      "refer": [],
+	      "priority": 0
+	    },
+	    "productdetail.html": {
+	      "resources": [
+	        "image/shx.png",
+	        "image/sure.png",
+	        "image/cart.png",
+	        "image/prev.png",
+	        "index.html",
+	        "image/perimg.png",
+	        "cart.html"
+	      ],
+	      "refer": [
+	        "rewardslist.html"
+	      ],
+	      "priority": 0
+	    },
+	    "rewardslist.html": {
+	      "resources": [
+	        "image/perimg.png",
+	        "productdetail.html",
+	        "style_script/jquery-1.7.2.min.js",
+	        "style_script/rewardlist.js"
+	      ],
+	      "refer": [],
+	      "priority": 0
+	    },
+	    "cart.html": {
+	      "resources": [
+	        "image/check1.png",
+	        "image/mian.png",
+	        "image/pro2.png",
+	        "style_script/touch-0.2.14.js",
+	        "rewardslist.html"
+	      ],
+	      "refer": [
+	        "kaijiang.html"
+	      ],
+	      "priority": 0
+	    },
+	    "myinformationlist.html": {
+	      "resources": [
+	        "mine.html"
+	      ],
+	      "refer": [],
+	      "priority": 0
+	    },
+	    "mobileindex_login.html": {
+	      "resources": [
+	        "image/eye.jpg",
+	        "image/weixin.png",
+	        "image/closelog.png",
+	        "image/close.png",
+	        "style_css/mobile_app.css",
+	        "style_script/login.js",
+	        "image/per.png",
+	        "image/logintitle.png",
+	        "style_script/user.js",
+	        "style_script/jquery-1.7.2.min.js",
+	        "style_css/basic.css",
+	        "image/yiyuan.png",
+	        "image/weibo.png",
+	        "image/key.png",
+	        "style_css/media.css",
+	        "image/qq.png",
+	        "index.html",
+	        "image/close_eye.png"
+	      ],
+	      "refer": [],
+	      "priority": 0
+	    },
+	    "chongzhi.html": {
+	      "resources": [],
+	      "refer": [
+	        "index.html"
+	      ],
+	      "priority": 0
+	    }
+	  },
+	  "idle": {
+	    "resources": [
+	      "image/200.png",
+	      "image/1.png",
+	      "image/more.png",
+	      "image/way2.png",
+	      "image/search.png",
+	      "image/way3.png",
+	      "order.html",
+	      "image/right.png",
+	      "image/loginlogo.png",
+	      "image/indexbg.png",
+	      "mobileindex_login_password.html",
+	      "image/logpasswordpc.png",
+	      "style_script/touch.js",
+	      "image/lognamepc.png",
+	      "image/down.png",
+	      "mobileindex_signup.html",
+	      "image/img_all.png",
+	      "image/4.png",
+	      "image/pr2.png",
+	      "image/way1.png",
+	      "image/up.png",
+	      "style_css/my-app.css",
+	      "image/3.png",
+	      "image/check2.png",
+	      "image/2.png",
+	      "style_css/main.css",
+	      "mobileindex_forgetpassword.html",
+	      "searchlist.html",
+	      "image/142.png"
+	    ]
+	  }
 	}
 }
